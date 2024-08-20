@@ -33,7 +33,6 @@ article {
     object-position: center;
 }
 
-
 .photo-item:nth-child(n + 10){
     counter-increment: photo;
 }
@@ -43,8 +42,7 @@ article {
     position: absolute;
 }
 
-/* Add overlay on the 9th item to show the count of extra images */
-.photo-item:nth-last-child(1):not(:nth-child(-n + 9)):before{
+.photo-item:last-child:not(:nth-child(-n + 9)):before{
     content: '+ ' counter(photo);
     display: flex;
     align-items: center;
@@ -60,3 +58,31 @@ article {
     font-weight: bold;
     border-radius: 5px;
 }
+    
+
+/* .photo-item:nth-child(n + 10){
+    counter-increment: photo;
+}
+
+.photo-item:nth-last-child(-n + 3):not(:last-child){
+    visibility: hidden;
+    position: absolute;
+} */
+
+/* Add overlay on the 9th item to show the count of extra images */
+/* .photo-item:nth-last-child(1):not(:nth-child(-n + 9)):before{
+    content: '+ ' counter(photo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+} */
